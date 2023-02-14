@@ -45,7 +45,7 @@ GuessBtn.addEventListener("click" ,function(e){
         input_err2.innerText = ""
         chanceNumber --
         pleyerOneInput2.value =""
-        if(chanceNumber >0 && chanceNumber <3){
+        if(chanceNumber !==0){
             if(pleayerOneNumber == pleyerOneInput2.value){
                 input_err2.innerText = "pleayer two winner"
                 input_err2.style.color ="green"
@@ -54,6 +54,7 @@ GuessBtn.addEventListener("click" ,function(e){
                }
            }else{
             input_err2.innerText ="pleayer one winner"
+            chance.innerText = "game over"
             input_err2.style.color ="green"            
        }
       }else{
