@@ -36,7 +36,7 @@ startBtn.addEventListener("click" , function(e){
 })
 
 
-// pleayer-two
+                 // pleayer-two
 GuessBtn.addEventListener("click" ,function(e){
    e.preventDefault()
    if(pleyerOneInput2.value){
@@ -44,7 +44,8 @@ GuessBtn.addEventListener("click" ,function(e){
       if(pleyerOneInput2.value >0 && pleyerOneInput2.value <10){
         input_err2.innerText = ""
         chanceNumber --
-        if(chanceNumber !== 0){
+        pleyerOneInput2.value =""
+        if(chanceNumber >0 && chanceNumber <3){
             if(pleayerOneNumber == pleyerOneInput2.value){
                 input_err2.innerText = "pleayer two winner"
                 input_err2.style.color ="green"
